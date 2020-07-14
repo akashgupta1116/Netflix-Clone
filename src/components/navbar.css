@@ -1,0 +1,25 @@
+.navbar{
+    position: fixed;
+    top:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    transition:  0.45s;
+    /* margin: 20px; */
+}
+.navbar-scroll{
+    background-color: black;
+}
+.nav-logo{
+    width:80px;
+    left:0;
+    padding: 20px;
+    object-fit: contain;
+}
+.user-logo{
+    height:30px;
+    width:30px;
+    object-fit: contain;
+    padding: 20px;
+}
