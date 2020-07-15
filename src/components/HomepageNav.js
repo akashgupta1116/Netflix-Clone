@@ -14,7 +14,7 @@ class HomepageNav extends Component {
 
     responseGoogle=response=>{
         
-        console.log(response.profileObj);
+        console.log('response',response.profileObj);
         if(response.profileObj){
             localStorage.setItem('profileObj',JSON.stringify(response.profileObj))
             this.setState({
