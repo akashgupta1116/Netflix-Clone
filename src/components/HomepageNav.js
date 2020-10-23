@@ -28,7 +28,7 @@ class HomepageNav extends Component {
         }
         return (
             <div className="homepage-nav">
-                <img className="home-nav-logo" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Logo_Netflix.png"/>
+                <img className="home-nav-logo" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Logo_Netflix.png" alt="netflix-logo"/>
                 
                 <GoogleLogin
                                     clientId="846660842017-iqokg41jpqohmujg4elthu1q7usis6u9.apps.googleusercontent.com"
