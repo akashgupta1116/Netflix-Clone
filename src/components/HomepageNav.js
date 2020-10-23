@@ -24,7 +24,7 @@ class HomepageNav extends Component {
     }
     render() {
         if (this.state.redirect) {
-            return <Redirect to="/loggedin" noThrow />;
+            return <Redirect to= "/loggedin" noThrow />;
         }
         return (
             <div className="homepage-nav">

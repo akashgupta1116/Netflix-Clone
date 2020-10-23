@@ -18,7 +18,7 @@ function App() {
 
             <Router basename='/Netflix-Clone' >
                   <Homepage path='/'/>
-                  <PrivateRoute as={LoggedIn} path="/LoggedIn" />
+                  {/* <PrivateRoute as={LoggedIn} path="/loggedin" /> */}
                   <LoggedIn path = '/loggedin'/>
                   
             </Router>
