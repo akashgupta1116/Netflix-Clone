@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8070a648a0ad94ef3641750375c8a032",
+    "revision": "6d64520125dd54cca03c2c37e4df8fd9",
     "url": "/Netflix-Clone/index.html"
   },
   {
