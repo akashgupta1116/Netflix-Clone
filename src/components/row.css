@@ -25,7 +25,6 @@
 }
 .large-image{
     max-height: 250px;
-    margin-right: 10px;
     transition: transform 0.45s;
     padding-top:20px;
     padding-bottom: 20px;
