@@ -29,23 +29,24 @@ class Row extends Component {
     }
 
     handleMovieTrailer=(movieName)=>{
-        if(this.state.trailerPath){
-            this.setState({
-                trailerPath:''
-            })
-        }
-        else{
 
+        console.log('titleName',movieName)
+        
+        
             movieTrailer( movieName || '' )
             .then((resp)=> {
+                console.log('response traile',resp)
                 const urlParams = new URLSearchParams(new URL(resp).search);
+                console.log('urlParams',urlParams)
                 // debugger;
                 this.setState({
                     trailerPath:urlParams.get('v')
+                },()=>{
+                    console.log('trailerPath',this.state.trailerPath)
                 })
             }).catch( console.error )
             
-        }
+        
     }
 
     render() {
@@ -63,7 +64,10 @@ class Row extends Component {
                 <div className="image-row">
                     {this.state.movies?this.state.movies.map(item=>{
                         if(item.backdrop_path){
-                            return <img className={this.props.largeImages?"large-image":"image"} src={`${imageBase_url}${this.props.largeImages?item.poster_path:item.backdrop_path}`} alt ={item.original_name} onClick={()=>this.handleMovieTrailer(item.name)}/>
+                            return <div className="img-card" onClick={()=>this.handleMovieTrailer(item.name || item.title)}>
+                                    <img className={this.props.largeImages?"large-image":"image"} src={`${imageBase_url}${this.props.largeImages?item.poster_path:item.backdrop_path}`} alt ={item.original_name} />
+                                    <p className="overlay">{item.name || item.title }</p>
+                                </div>
                         }
                         else{
                             return null;

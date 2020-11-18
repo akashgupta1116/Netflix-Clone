@@ -15,8 +15,7 @@
 .image{
     object-fit: contain;
     max-height: 100px;
-    width:100%;
-    margin-right: 10px;
+    display: block;
     transition: transform 0.45s;
     padding-top:20px;
     padding-bottom: 20px;
@@ -26,7 +25,6 @@
 }
 .large-image{
     max-height: 250px;
-    width: 200px;
     margin-right: 10px;
     transition: transform 0.45s;
     padding-top:20px;
@@ -35,3 +33,26 @@
 .large-image:hover{
     transform: scale(1.09);
 }
+
+.img-card{
+     position: relative; 
+     margin-right: 10px;
+}
+.img-card:hover .overlay{
+    opacity: 1;
+    
+}
+.img-card:hover{
+    cursor: pointer;
+}
+.overlay{
+    position: absolute;
+    opacity: 0;
+    bottom: 10px;
+    transition: .5s ease;
+    font-size: 15px;
+    font-weight: bold;
+    z-index: 2000;
+    color: white;
+}
+
